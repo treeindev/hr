@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "f60a1011-ed3d-499c-88cf-664e72cbf3f7",
+		"name": "HR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/employees",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/employee/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"employee",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Employee Name 6\",\n    \"department\": 2,\n    \"salary\": 150000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/employee",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/employee/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"employee",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/departments?salary_filter=true",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"departments"
+					],
+					"query": [
+						{
+							"key": "salary_filter",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/department/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"department",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Photography\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/department",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"department"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

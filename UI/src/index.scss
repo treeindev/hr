@@ -1,0 +1,26 @@
+/* 
+    The following declarations overwrite the default nestline-theme library.
+    There is no header on top of the application, 
+    so navigation and layout have to be equal to user's height.
+*/
+.cmp__navigation {
+    top: 0px;
+    height: 100vh;
+}
+
+.layout-main {
+    height: calc( 100vh - ( 30px * 2 ));
+}
+
+.user-profile header {
+    height: 70px;
+    background-color: #e0e0e0;
+}
+
+.cmp__table {
+    max-width: 800px;
+
+    .content > div {
+        cursor: pointer;
+    }
+}
